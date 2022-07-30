@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: traffic_dwh
+    description: "DWH database containing the data"
+    database: airflow
+    schema: public
+    tables:
+      - name: traffic_flow
+        description: "traffic flow table"
+        columns:
+          - name: id # required
+            description: unique identifier for each record in the database
+          - name: track_id
+            description: id of the track the vehicle is on
+          - name: vehicle_types
+            description: type of the vehicle
+          - name: traveled_d
+            description: distance traveled by the vehicle
+          - name: avg_speed
+            description: average speed of the vehicle
+          - name: trajectory
+            description: longitude, latitude and other details about the vehile on the track
+     
